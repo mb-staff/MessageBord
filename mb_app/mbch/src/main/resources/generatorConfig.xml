@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration >
+  <classPathEntry location="/Users/yoshituneMac/Documents/DEVELOP/tools/mysql-connector-java-5.1.35/mysql-connector-java-5.1.35-bin.jar"/>
+  <context id="context1" >
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/mbdb" userId="root" password="" />
+    <javaModelGenerator targetPackage="jp.co.mbch.dataAccess.entity"
+        targetProject="mbch/src/main/java"></javaModelGenerator>
+    <sqlMapGenerator targetPackage="mapper"
+        targetProject="mbch/src/main/resources" />
+    <javaClientGenerator targetPackage="jp.co.mbch.dataAccess.client"
+        targetProject="mbch/src/main/java" type="XMLMAPPER"></javaClientGenerator>
+    <table schema="mbdb" tableName="topic" ></table>
+    <table schema="mbdb" tableName="topic_type" ></table>
+    <table schema="mbdb" tableName="thread" ></table>
+    <table schema="mbdb" tableName="response" ></table>
+  </context>
+</generatorConfiguration>
