@@ -12,12 +12,12 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public class ResponseDaoImpl implements ResponseDao{
-    
+
     Response entity;
-    
+
     @Autowired
     ResponseMapper mapper;
-    
+
     ResponseExample example;
 
     @Override
@@ -27,18 +27,17 @@ public class ResponseDaoImpl implements ResponseDao{
 
     @Override
     public int update(Response inputEntity) {
-        // TODO 自動生成されたメソッド・スタブ
-        return mapper.updateByPrimaryKey(inputEntity);
+        return mapper.updateByPrimaryKeySelective(inputEntity);
     }
 
     @Override
     public List<Response> findByThreadId(int threadId) {
-        
+
         example = new ResponseExample();
         example.createCriteria().andThreadIdEqualTo(threadId).andDeleteFlagEqualTo(0);
-        
+
         return mapper.selectByExample(example);
     }
-    
+
 
 }

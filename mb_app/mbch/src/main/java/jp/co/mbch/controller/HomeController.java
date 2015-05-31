@@ -42,12 +42,11 @@ public class HomeController {
 
         ResponseModel rm = new ResponseModel();
         rm.setResponseNo(1);
+        rm.setThreadId(1);
         rm.setResponseComment("テストコメント。導通一号");
-        System.out.println(rm);
-        
+
         rl.add(rm);
-        
-        
+
         return "home";
     }
 
