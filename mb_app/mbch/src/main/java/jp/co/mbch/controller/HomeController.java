@@ -47,7 +47,7 @@ public class HomeController {
 
         rl.add(rm);
 
-        return "home";
+        return "topiclist";
     }
 
 }
